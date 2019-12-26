@@ -42,15 +42,15 @@ public interface LinkMapper
      * @return 结果
      */
 	public int updateLink(Link link);
-	
+
 	/**
      * 删除链接管理
-     * 
+     *
      * @param mid 链接管理ID
      * @return 结果
      */
 	public int deleteLinkById(Integer mid);
-	
+
 	/**
      * 批量删除链接管理
      * 
