@@ -1,0 +1,16 @@
+   */
+	public Partymember selectPartymemberById(Integer pid);
+
+	@DataSource(value = DataSourceType.SXVILLAGE)
+	Partymember selectPartymemberBySex(String sex);
+	@DataSource(value = DataSourceType.SXVILLAGE)
+
+	/**
+     * 查询暮云党员列表
+     * 
+     * @param partymember 暮云党员信息
+     * @return 暮云党员集合
+     */
+	public List<Partymember> selectPartymemberList(Partymember partymember);
+	
+	/**
