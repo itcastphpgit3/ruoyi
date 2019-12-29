@@ -4,8 +4,11 @@ import com.ruoyi.village.domain.Partymember;
 import com.ruoyi.village.domain.Pedulevel;
 import com.ruoyi.village.domain.Pmcount;
 import com.ruoyi.village.domain.pubObjApi;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Map;
+import java.util.regex.PatternSyntaxException;
 
 /**
  * 暮云党员 数据层
@@ -22,7 +25,9 @@ public interface PartymemberMapper
      * @return 暮云党员信息
      */
 	public Partymember selectPartymemberById(Integer pid);
-	
+
+	public Partymember selectPartymemberBySex(String sex);
+
 	/**
      * 查询暮云党员列表
      * 
@@ -30,6 +35,7 @@ public interface PartymemberMapper
      * @return 暮云党员集合
      */
 	public List<Partymember> selectPartymemberList(Partymember partymember);
+
 	
 	/**
      * 新增暮云党员
@@ -74,5 +80,9 @@ public interface PartymemberMapper
 
 	public List<Pedulevel> countbyedulevel();
 
+
+
 	public List<Partymember> selectPartymemberListBytype(pubObjApi group);
+
+
 }

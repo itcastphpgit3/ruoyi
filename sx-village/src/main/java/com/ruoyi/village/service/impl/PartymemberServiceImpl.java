@@ -38,7 +38,14 @@ public class PartymemberServiceImpl implements IPartymemberService
 	{
 	    return partymemberMapper.selectPartymemberById(pid);
 	}
-	
+
+	@Override
+	@DataSource(value = DataSourceType.SXVILLAGE)
+	public Partymember selectPartymemberBySex(String sex)
+	{
+		return partymemberMapper.selectPartymemberBySex(sex);
+	}
+
 	/**
      * 查询暮云党员列表
      * 
@@ -114,6 +121,7 @@ public class PartymemberServiceImpl implements IPartymemberService
 	public List<Pedulevel> countbyedulevel(){
 		return partymemberMapper.countbyedulevel();
 	}
+
 
 
 	@Override

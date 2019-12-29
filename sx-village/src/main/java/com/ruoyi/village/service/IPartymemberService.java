@@ -1,5 +1,7 @@
 package com.ruoyi.village.service;
 
+import com.ruoyi.common.annotation.DataSource;
+import com.ruoyi.common.enums.DataSourceType;
 import com.ruoyi.village.domain.Partymember;
 import com.ruoyi.village.domain.Pedulevel;
 import com.ruoyi.village.domain.Pmcount;
@@ -22,7 +24,10 @@ public interface IPartymemberService
      * @return 暮云党员信息
      */
 	public Partymember selectPartymemberById(Integer pid);
-	
+
+	@DataSource(value = DataSourceType.SXVILLAGE)
+	Partymember selectPartymemberBySex(String sex);
+
 	/**
      * 查询暮云党员列表
      * 
@@ -65,6 +70,8 @@ public interface IPartymemberService
 	public List<Partymember> selectGrouplist(pubObjApi group);
 
 	public List<Pedulevel> countbyedulevel();
+
+
 
 	public List<Partymember> selectPartymemberListBytype(pubObjApi group);
 
